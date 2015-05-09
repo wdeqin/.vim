@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='D:/ws/lang/gcc'
+let g:netrw_dirhist_2='D:/ws'
+let g:netrw_dirhist_3='D:/ws/lang'
+let g:netrw_dirhist_4='D:/ws/lang/gcc'
+let g:netrw_dirhist_5='D:/ws/lang/go'
+let g:netrw_dirhist_6='D:/ws/lang/go/src'
+let g:netrw_dirhist_7='D:/ws/lang/gcc'
+let g:netrw_dirhist_8='D:/ws/lang/go/src'
