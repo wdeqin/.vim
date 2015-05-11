@@ -110,3 +110,7 @@ function! SetTag()
 endfunction
 nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
+
+" git clone https://github.com/scrooloose/nerdtree.git
+" git clone https://github.com/altercation/vim-colors-solarized.git
+" git clone https://github.com/fatih/vim-go.git
