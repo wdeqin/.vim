@@ -1,25 +1,28 @@
+" To disable a plugin, add it's bundle name to the following listlet
+let g:pathogen_disabled = [ 'vim-ultisnips' ]
 execute pathogen#infect()
-syntax on
+
 if has('gui_running')
     set background=dark
     colorscheme solarized
-    set guifont=Consolas:h10:cANSI
+    set guifont=YaHei\ Consolas\ Hybrid
+    set lines=43 columns=164
+    " highlight current column
+    set cursorcolumn
 endif
-filetype plugin indent on
 
-set lines=50 columns=164
+syntax on
+filetype plugin indent on
 
 " show status bar
 set laststatus=2
+let g:Powerline_colorscheme='solarized256'
 
 " show cursor current position
 set ruler
 
 " highlight current line
 set cursorline
-
-" highlight current column
-set cursorcolumn
 
 " highlight search result(s)
 set hlsearch
@@ -88,6 +91,16 @@ let NERDTreeAutoDeleteBuffer=1
 
 " define hotkey prefix <leader>
 let mapleader=";"
+
+" UltiSnipes
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" " If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+
 nmap <leader>q :q<CR>
 nmap <leader>ww <C-W><C-W>
 nmap <leader>wh <C-W>h
@@ -99,9 +112,11 @@ nmap <leader>hl :set hlsearch!<CR>
 " Turn off highlighting until next search
 nmap <leader>nl :noh<CR>
 " <F11> Fullscreen Toggle
-nmap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
-nmap <leader>tl :Tlist<CR>
+" nmap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+" Taglist
+"nmap <leader>tl :Tlist<CR>
 nmap <leader>fl :NERDTreeToggle<CR>
+nmap <leader>tl :Tlist<CR>
 
 function! SetTag()
     if filereadable("tags")
@@ -111,6 +126,35 @@ endfunction
 nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
 
+" YCM 补全菜单配色
+" " 菜单
+" highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
+" " 选中项
+" highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
+" " 补全功能在注释中同样有效
+" let g:ycm_complete_in_comments=1
+" " 允许 vim 加载 .ycm_extra_conf.py 文件，不再提示
+let g:ycm_confirm_extra_conf=0
+" " 开启 YCM 标签补全引擎
+let g:ycm_collect_identifiers_from_tags_files=1
+" " 引入 C++ 标准库tags
+" set tags+=/data/misc/software/misc./vim/stdcpp.tags
+" " YCM 集成 OmniCppComplete 补全引擎，设置其快捷键
+" inoremap <leader>; <C-x><C-o>
+" " 补全内容不以分割子窗口形式出现，只显示补全列表
+" set completeopt-=preview
+" " 从第一个键入字符就开始罗列匹配项
+" let g:ycm_min_num_of_chars_for_completion=1
+" " 禁止缓存匹配项，每次都重新生成匹配项
+" let g:ycm_cache_omnifunc=0
+" " 语法关键字补全         
+" let g:ycm_seed_identifiers_with_syntax=1
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+
 " git clone https://github.com/scrooloose/nerdtree.git
 " git clone https://github.com/altercation/vim-colors-solarized.git
 " git clone https://github.com/fatih/vim-go.git
+" git clone https://github.com/Lokaltog/vim-powerline.git
+" git clone https://github.com/Valloric/YouCompleteMe.git
+" git clone https://github.com/Valloric/ycmd.git
+" git clone https://github.com/Chiel92/vim-autoformat.git
