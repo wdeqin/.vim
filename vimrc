@@ -143,7 +143,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 " inoremap <leader>; <C-x><C-o>
 " " 补全内容不以分割子窗口形式出现，只显示补全列表
 " set completeopt-=preview
-" " 从第一个键入字符就开始罗列匹配项
+"vim-autoformat " 从第一个键入字符就开始罗列匹配项
 " let g:ycm_min_num_of_chars_for_completion=1
 " " 禁止缓存匹配项，每次都重新生成匹配项
 " let g:ycm_cache_omnifunc=0
@@ -154,6 +154,8 @@ let g:ycm_collect_identifiers_from_tags_files=1
 " git clone https://github.com/scrooloose/nerdtree.git
 " git clone https://github.com/altercation/vim-colors-solarized.git
 " git clone https://github.com/fatih/vim-go.git
+" git clone https://github.com/SirVer/ultisnips.git
+" git clone https://github.com/honza/vim-snippets.git
 " git clone https://github.com/Lokaltog/vim-powerline.git
 " git clone https://github.com/Valloric/YouCompleteMe.git
 " git clone https://github.com/Valloric/ycmd.git
