@@ -37,6 +37,7 @@ set autoindent!
 set tabstop=4
 set expandtab!
 set colorcolumn=80
+set showcmd
 
 " enable code fold
 set foldmethod=syntax
@@ -150,6 +151,11 @@ let g:ycm_collect_identifiers_from_tags_files=1
 " " 语法关键字补全         
 " let g:ycm_seed_identifiers_with_syntax=1
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+
+" encoding
+set fileencodings=utf-8,acsii,gbk,gb2312,gb18030,cp936
+set termencoding=utf-8
+set encoding=utf-8
 
 " git clone https://github.com/scrooloose/nerdtree.git
 " git clone https://github.com/altercation/vim-colors-solarized.git
