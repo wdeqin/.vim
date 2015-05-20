@@ -1,5 +1,5 @@
 " To disable a plugin, add it's bundle name to the following listlet
-let g:pathogen_disabled = [ 'vim-ultisnips' ]
+let g:pathogen_disabled = [ 'YouCompleteMe' ]
 execute pathogen#infect()
 
 if has('gui_running')
@@ -96,7 +96,7 @@ let mapleader=";"
 " UltiSnipes
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " " If you want :UltiSnipsEdit to split your window.
@@ -153,7 +153,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 " encoding
-set fileencodings=utf-8,acsii,gbk,gb2312,gb18030,cp936
+set fileencodings=utf-8,ascii,gbk,gb2312,gb18030,cp936
 set termencoding=utf-8
 set encoding=utf-8
 

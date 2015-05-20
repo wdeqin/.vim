@@ -1,0 +1,19 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+priority -50
+
+snippet fh "File header description" b
+/*
+ * File: `!v expand('%:t')`
+ * Author: `echo $AUTHOR`
+ * Purpose: ${1:purpose...}
+ * Time: `!v strftime("%F %X")`
+ */
+endsnippet
+
+snippet todo "TODO reminder" b
+//TODO: ${1:description...} 
+//by `echo $AUTHOR`	`!v strftime("%F %X")`	
+endsnippet
