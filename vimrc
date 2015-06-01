@@ -56,11 +56,6 @@ set guioptions-=m
 " hide toolbar
 set guioptions-=T
 
-" change working directory
-if !empty($WS)
-    cd $WS
-endif
-
 " NERDTree file browser
 " open NERDTree when startup
 " autocmd vimenter * NERDTree
@@ -124,8 +119,15 @@ function! SetTag()
         :set tags=tags<CR>
     endif
 endfunction
+function! GoWS()
+    " change working directory
+    if !empty($WS)
+        :NERDTree $WS
+    endif
+endfunction
 nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
+nmap <leader>ws :call GoWS()<CR>
 
 " YCM 补全菜单配色
 " " 菜单
