@@ -5,10 +5,14 @@ execute pathogen#infect()
 if has('gui_running')
     set background=dark
     colorscheme solarized
-    set guifont=YaHei\ Consolas\ Hybrid
+    set guifont=YaHei\ Consolas\ Hybrid\ 12
     set lines=43 columns=164
     " highlight current column
     set cursorcolumn
+else
+    set cursorcolumn
+    set lines=43 columns=132
+    colorscheme slate
 endif
 
 syntax on
