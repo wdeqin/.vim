@@ -3,7 +3,7 @@ let g:pathogen_disabled = [ 'YouCompleteMe' ]
 execute pathogen#infect()
 
 if has('gui_running')
-    set background=dark
+    "set background=dark
     colorscheme solarized
     set guifont=YaHei\ Consolas\ Hybrid\ 12
     set lines=43 columns=164
@@ -11,7 +11,7 @@ if has('gui_running')
     set cursorcolumn
 else
     set cursorcolumn
-    set lines=43 columns=132
+    set lines=43 columns=120
     colorscheme slate
 endif
 

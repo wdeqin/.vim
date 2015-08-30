@@ -4,6 +4,26 @@
 
 priority -50
 
+snippet fh "file header" b
+/**
+ * File: `!p snip.rv = snip.fn`
+ * Author: `!v $AUTHOR`
+ * Time: `!v strftime('%c')`
+ * Purpose: ${1:purpose...}
+ */
+endsnippet
+
+snippet cls "file class" b
+public class $1 {
+}
+endsnippet
+
+snippet main "main func" b
+public static void main(String[] argv) {
+	$1
+}
+endsnippet
+
 snippet if "if () {}" b
 if (${1:/*condition*/}) {
 	${2://TODO}
@@ -61,5 +81,9 @@ snippet while "while loop" b
 while(${1:/*condition*/}) {
 	$2	
 }
+endsnippet
+
+snippet put "system.out.println" b
+System.out.println($1);
 endsnippet
 
