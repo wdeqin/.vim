@@ -101,6 +101,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
 
+" Emmet
+let g:user_emmet_mode='a'    "enable all function in all mode.
+let g:user_emmet_install_global = 0
+"let g:user_emmet_leader_key='<C-Y>'
+autocmd FileType html,css EmmetInstall
+
 nmap <leader>q :q<CR>
 nmap <leader>ww <C-W><C-W>
 nmap <leader>wh <C-W>h
@@ -172,3 +178,4 @@ set encoding=utf-8
 " git clone https://github.com/Valloric/YouCompleteMe.git
 " git clone https://github.com/Valloric/ycmd.git
 " git clone https://github.com/Chiel92/vim-autoformat.git
+" git clone http://github.com/mattn/emmet-vim.git
