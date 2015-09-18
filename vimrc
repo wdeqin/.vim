@@ -1,5 +1,5 @@
 " To disable a plugin, add it's bundle name to the following listlet
-"let g:pathogen_disabled = [ 'YouCompleteMe' ]
+let g:pathogen_disabled = [ 'YouCompleteMe' ]
 execute pathogen#infect()
 
 if has('gui_running')
@@ -123,21 +123,19 @@ nmap <leader>nl :noh<CR>
 "nmap <leader>tl :Tlist<CR>
 nmap <leader>fl :NERDTreeToggle<CR>
 nmap <leader>tl :Tlist<CR>
+nmap <leader>nt :NERDTree 
+nmap <leader>pp :"+pp<CR>
+nmap <leader>yy :"+yy<CR>
+nmap <leader>yaw :"+yaw<CR>
 
 function! SetTag()
     if filereadable("tags")
         :set tags=tags<CR>
     endif
 endfunction
-function! GoWS()
-    " change working directory
-    if !empty($WS)
-        :NERDTree $WS
-    endif
-endfunction
 nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
-nmap <leader>ws :call GoWS()<CR>
+nmap <leader>ws :NERDTree $WS<CR>
 
 " YCM 补全菜单配色
 " " 菜单
