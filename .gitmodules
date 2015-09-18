@@ -24,4 +24,4 @@
     url=https://github.com/Chiel92/vim-autoformat.git
 [submodule "bundle/emmet-vim"]
     path=bundle/emmet-vim
-    url=git clone http://github.com/mattn/emmet-vim.git
+    url=https://github.com/mattn/emmet-vim.git
