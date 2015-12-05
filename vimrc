@@ -1,5 +1,5 @@
 " To disable a plugin, add it's bundle name to the following listlet
-let g:pathogen_disabled = [ 'YouCompleteMe' ]
+"let g:pathogen_disabled = [ 'YouCompleteMe' ]
 execute pathogen#infect()
 
 if has('gui_running')
