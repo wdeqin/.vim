@@ -1,5 +1,5 @@
 " To disable a plugin, add it's bundle name to the following listlet
-"let g:pathogen_disabled = [ 'YouCompleteMe' ]
+let g:pathogen_disabled = [ 'YouCompleteMe' ]
 execute pathogen#infect()
 
 if has('gui_running')
@@ -104,7 +104,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " Emmet
 let g:user_emmet_mode='a'    "enable all function in all mode.
 let g:user_emmet_install_global = 0
-"let g:user_emmet_leader_key='<C-Y>'
+let g:user_emmet_leader_key='<C-y>'
 autocmd FileType html,css EmmetInstall
 
 nmap <leader>q :q<CR>
