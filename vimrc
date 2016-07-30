@@ -1,12 +1,13 @@
 " To disable a plugin, add it's bundle name to the following listlet
-let g:pathogen_disabled = [ 'YouCompleteMe' ]
+let g:pathogen_disabled = [ ]
 execute pathogen#infect()
 
 if has('gui_running')
     set background=dark
     colorscheme solarized
-    set guifont=YaHei\ Consolas\ Hybrid\ 12
-    set lines=43 columns=164
+"   set guifont=YaHei\ Consolas\ Hybrid\ 12
+    set guifont=Monospace\ Regular\ 12
+    set lines=43 columns=120
     " highlight current column
     set cursorcolumn
 else
