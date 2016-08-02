@@ -7,7 +7,7 @@ if has('gui_running')
     colorscheme solarized
 "   set guifont=YaHei\ Consolas\ Hybrid\ 12
     set guifont=Monospace\ Regular\ 12
-    set lines=43 columns=120
+    set lines=49 columns=132
     " highlight current column
     set cursorcolumn
 else
