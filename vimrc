@@ -1,5 +1,5 @@
 " To disable a plugin, add it's bundle name to the following listlet
-let g:pathogen_disabled = [ ]
+let g:pathogen_disabled = []
 execute pathogen#infect()
 
 if has('gui_running')
@@ -125,9 +125,9 @@ nmap <leader>nl :noh<CR>
 nmap <leader>fl :NERDTreeToggle<CR>
 nmap <leader>tl :Tlist<CR>
 nmap <leader>nt :NERDTree 
-nmap <leader>pp :"+pp<CR>
-nmap <leader>yy :"+yy<CR>
-nmap <leader>yaw :"+yaw<CR>
+nmap <leader>pp "+pp<CR>
+nmap <leader>yy "+yy<CR>
+nmap <leader>yaw "+yaw<CR>
 
 function! SetTag()
     if filereadable("tags")
