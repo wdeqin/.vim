@@ -5,8 +5,8 @@ execute pathogen#infect()
 if has('gui_running')
     set background=dark
     colorscheme solarized
-"   set guifont=YaHei\ Consolas\ Hybrid\ 12
-    set guifont=Monospace\ Regular\ 12
+    set guifont=YaHei\ Consolas\ Hybrid\ 12
+"   set guifont=Monospace\ Regular\ 12
     set lines=49 columns=132
     " highlight current column
     set cursorcolumn
@@ -129,6 +129,8 @@ nmap <leader>pp "+pp<CR>
 nmap <leader>yy "+yy<CR>
 nmap <leader>yaw "+yaw<CR>
 
+nmap <leader>fmt :Autoformat<CR>
+
 function! SetTag()
     if filereadable("tags")
         :set tags=tags<CR>
@@ -137,6 +139,7 @@ endfunction
 nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
 nmap <leader>ws :NERDTree $WS<CR>
+map <silent> <F11>  :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
 " YCM 补全菜单配色
 " " 菜单
