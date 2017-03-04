@@ -79,7 +79,7 @@ map <C-n> :NERDTreeToggle<CR>
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " NERDTreeToggle Position
-let NERDTreeWinPos="right"
+let NERDTreeWinPos="left"
 
 " Show hidden files
 " let NERDTreeShowHidden=1
@@ -93,7 +93,7 @@ let NERDTreeAutoDeleteBuffer=1
 " define hotkey prefix <leader>
 let mapleader=";"
 
-" UltiSnipes
+" UltiSnips
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-k>"
@@ -155,15 +155,15 @@ let g:ycm_collect_identifiers_from_tags_files=1
 " " 引入 C++ 标准库tags
 " set tags+=/data/misc/software/misc./vim/stdcpp.tags
 " " YCM 集成 OmniCppComplete 补全引擎，设置其快捷键
-" inoremap <leader>; <C-x><C-o>
+inoremap <leader>; <C-x><C-o>
 " " 补全内容不以分割子窗口形式出现，只显示补全列表
 " set completeopt-=preview
 "vim-autoformat " 从第一个键入字符就开始罗列匹配项
 " let g:ycm_min_num_of_chars_for_completion=1
 " " 禁止缓存匹配项，每次都重新生成匹配项
 " let g:ycm_cache_omnifunc=0
-" " 语法关键字补全         
-" let g:ycm_seed_identifiers_with_syntax=1
+" 语法关键字补全         
+let g:ycm_seed_identifiers_with_syntax=1
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 "indent guides
